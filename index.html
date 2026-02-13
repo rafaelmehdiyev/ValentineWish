@@ -1,137 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Happy Valentine :)</title>
-    <link
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="one">
-        <h1 class="one">
-          Hey
-          <span id="name">xyz</span>
-        </h1>
-        <p class="two" id="greetingText">I really like your name btw!</p>
-      </div>
-      <div class="three">
-        <p>It's Valentine!!! :D</p>
-      </div>
-      <div class="four">
-        <div class="text-box">
-          <p class="hbd-chatbox">
-            Happy Valentine's Day!! Yeee! Love and blah blah...
-          </p>
-          <p class="fake-btn">Send</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💖 Happy Valentine's Day</title>
+  <meta name="description" content="A special Valentine's Day surprise made with love" />
+  <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-heart">💖</div>
+    <p class="loader-text">Preparing something special...</p>
+  </div>
+
+  <!-- Cursor Trail Canvas -->
+  <canvas id="cursor-trail"></canvas>
+
+  <!-- Music Toggle -->
+  <button id="music-toggle" aria-label="Toggle music">
+    <span class="music-icon" id="music-icon">🔇</span>
+  </button>
+
+  <!-- Floating Hearts Background -->
+  <div id="floating-hearts"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Scene 1: Greeting -->
+    <div class="scene scene-one">
+      <h1 class="greeting-name">
+        Hey
+        <span id="name">xyz</span>
+      </h1>
+      <p class="greeting-text" id="greetingText">I really like your name btw!</p>
+    </div>
+
+    <!-- Scene 2: Valentine Announcement + Countdown -->
+    <div class="scene scene-two">
+      <p class="valentine-announce">It's Valentine!!! 💝</p>
+      <div class="countdown" id="countdown"></div>
+    </div>
+
+    <!-- Scene 3: Chat Bubble -->
+    <div class="scene scene-three">
+      <div class="chat-box">
+        <div class="chat-bubble">
+          <p class="hbd-chatbox">Happy Valentine's Day!! 💖😚😚</p>
         </div>
-      </div>
-      <div class="five">
-        <p class="idea-1">That's what I was going to do.</p>
-        <p class="idea-2">But then I stopped.</p>
-        <p class="idea-3">
-          I realised, I wanted to do something <strong>special</strong>.
-        </p>
-        <p class="idea-4">Because,</p>
-        <p class="idea-5">
-          You are Special
-          <span>:)</span>
-        </p>
-        <p class="idea-6">
-          <span>S</span>
-          <span>O</span>
-        </p>
-      </div>
-      <div class="six">
-        <img src="img/vector.jpg" alt="" class = "girl-dp" id="imagePath" />
-        <div class="wish">
-          <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
-          <h5 id="wishText">kuch kuch</h5>
-        </div>
-      </div>
-      <div class="seven">
-        <div class="baloons">
-          <img src="img/balloon.svg" alt="" />
-          <!-- <img src="img/music-note.svg" alt="" /> -->
-          <img src="img/smiling.svg" />
-          <img src="img/heart.svg" />
-          <!-- <img src="img/happy.svg" alt="" /> -->
-          <img src="img/balloon.svg" alt="" />
-          <!-- <img src="img/music-note.svg" alt="" /> -->
-          <!-- <img src="img/smiling.svg" /> -->
-          <img src="img/heart.svg" />
-          <img src="img/balloon.svg" alt="" />
-          <img src="img/music-note.svg" alt="" />
-          <img src="img/heart.svg" />
-          <img src="img/balloon.svg" alt="" />
-          <!-- <img src="img/music-note.svg" alt="" /> -->
-          <!-- <img src="img/smiling.svg" /> -->
-          
-          <img src="img/heart.svg" />
-          <img src="img/balloon.svg" alt="" />
-          <img src="img/heart.svg" />
-          <img src="img/heart.svg" />
-          <img src="img/music-note.svg" alt="" />
-          <img src="img/smiling.svg" />
-         
-          <img src="img/happy.svg" alt="" />
-          <img src="img/balloon.svg" alt="" />
-          <img src="img/heart.svg" />
-          <!-- <img src="img/music-note.svg" alt="" /> -->
-          <!-- <img src="img/heart.svg" />
-          
-          <img src="img/happy.svg" alt="" />
-          <img src="img/balloon.svg" alt="" />
-          <img src="img/music-note.svg" alt="" /> -->
-          <img src="img/smiling.svg" />
-          <!-- <img src="img/heart.svg" /> -->
-          <!-- <img src="img/happy.svg" alt="" /> -->
-        </div>
-      </div>
-      <div class="eight">
-        <svg viewBox="0 0 40 40" xmlnssvg/heart.svg.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" />
-        </svg>
-      </div>
-      <div class="nine">
-        <p>Okay, now come back and tell me if you liked it.</p>
-        <p id="replay">Or click, if you want to watch it again.</p>
-        <p class="last-smile">:)</p>
+        <p class="fake-btn">Send</p>
       </div>
     </div>
-  </body>
 
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-  <script type="text/babel" src="script/main.js"></script>
+    <!-- Scene 4: Story Sequence -->
+    <div class="scene scene-four">
+      <p class="idea idea-1">That's what I was going to do.</p>
+      <p class="idea idea-2">But then I suddenly stopped.</p>
+      <p class="idea idea-3">I realised, I wanted to do something <strong>special</strong>.</p>
+      <p class="idea idea-4">Because,</p>
+      <p class="idea idea-5">You are Special <span>:)</span></p>
+      <p class="idea idea-6"><span>S</span><span>O</span></p>
+    </div>
+
+    <!-- Scene 5: Love Letter -->
+    <div class="scene scene-five">
+      <div class="love-letter">
+        <div class="letter-seal">💌</div>
+        <div class="letter-paper">
+          <p class="letter-dear">My Dearest,</p>
+          <p class="letter-body" id="letterBody">Every moment with you feels like a beautiful dream I never want to wake
+            up from. You make my world brighter, my days warmer, and my heart fuller.</p>
+          <p class="letter-sign">With all my love 💕</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene 6: Photo Reveal + Balloons -->
+    <div class="scene scene-six">
+      <div class="baloons">
+        <img src="img/balloon.svg" alt="" />
+        <img src="img/heart.svg" alt="" />
+        <img src="img/balloon.svg" alt="" />
+        <img src="img/smiling.svg" alt="" />
+        <img src="img/heart.svg" alt="" />
+        <img src="img/balloon.svg" alt="" />
+        <img src="img/heart.svg" alt="" />
+        <img src="img/balloon.svg" alt="" />
+        <img src="img/music-note.svg" alt="" />
+        <img src="img/heart.svg" alt="" />
+        <img src="img/balloon.svg" alt="" />
+        <img src="img/smiling.svg" alt="" />
+        <img src="img/heart.svg" alt="" />
+        <img src="img/happy.svg" alt="" />
+      </div>
+      <div class="photo-gallery" id="photo-gallery"></div>
+      <div class="wish">
+        <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
+        <h5 id="wishText"></h5>
+      </div>
+    </div>
+
+    <!-- Scene 7: Expanding Circles -->
+    <div class="scene scene-seven">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" />
+      </svg>
+    </div>
+
+    <!-- Scene 8: Will You Be My Valentine? -->
+    <div class="scene scene-eight" id="scene-question">
+      <h2 class="question-title">Will you be my Valentine? 💘</h2>
+      <div class="question-buttons" id="question-buttons">
+        <button class="btn-yes" id="btn-yes">Yes! 💖</button>
+        <button class="btn-no" id="btn-no">No 😅</button>
+      </div>
+      <div class="yes-response" id="yes-response">
+        <h2>YAYYYY! 🎉💖🥰</h2>
+        <p>I hope you liked it CUTIEPIE!</p>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
 </html>
